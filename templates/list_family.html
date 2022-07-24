@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Family</title>
+  </head>
+  <body>
+    <h1>Estos son los familiares:</h1>
+    <ol style="display: flex;flex-wrap: wrap;">
+      {% for family in family_list %}
+      <li style="width: max-content;margin-right: 30px;">
+        <p>Nombre: {{ family.name }}</p>
+        <p>Edad: {{ family.age }}</p>
+        <p>Fecha de nacimiento: {{ family.date_of_birth }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </body>
+</html>
